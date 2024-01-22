@@ -3,7 +3,7 @@
         <h1>Projects List</h1>
         <ul>
             <li class="mb-2" v-for="item in store.projects" :key="item.id">
-                <router-link :to="{ name: 'project', params: { slug: item.slug } }" class="btn btn-primary" >{{ item.title }}</router-link>
+                <router-link :to="{ name: 'project', params: { id: item.id } }" class="btn btn-primary" >{{ item.title }}</router-link>
             </li>
 
         </ul>
@@ -22,8 +22,9 @@ import { store } from "../store";
         },
         methods: {
             getAllProjects(){
-                axios.get(${this.store.apiUrl}projects).then((res) => {
-                    store.projects = res.data.results.data;
+                axios.get(`${this.store.apiUrl}projects`).then((res) => {
+                    console.log(res.data);
+                    store.projects = res.data;
                 }).catch((err) => {
                     console.log(err);
                 })

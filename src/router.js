@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import AppHome from "../views/AppHome.vue";
+import AppHome from "./pages/AppHome.vue";
 
 import AppProjects from "./pages/AppProjects.vue";
 import ProjectDetail from "./pages/ProjectDetail.vue";
@@ -18,7 +18,7 @@ const router = createRouter({
             component: AppProjects,
         },
         {
-            path: "/projects/:slug",
+            path: "/projects/:id",
             name: "project",
             component: ProjectDetail,
         },

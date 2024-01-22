@@ -17,8 +17,9 @@ import { store } from "../store";
         methods: {
             getProject(){
                 console.log(this.$route);
-                axios.get(${this.store.apiUrl}projects/${this.$route.params.slug}).then((res) => {
-                    this.project = res.data.results;
+                axios.get(`${this.store.apiUrl}projects/${this.$route.params.id}`).then((res) => {
+                    console.log(res.data);
+                    this.project = res.data;
                     console.log(this.project);
                 })
             }

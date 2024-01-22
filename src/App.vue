@@ -31,7 +31,7 @@ import AppHeader from "./components/AppHeader.vue";
 </script>
 
 <style lang="scss" scoped>
-@use './assets/styles/partials/variables' as *;
+@use './assets/style/partials/variables' as *;
 
 
 
