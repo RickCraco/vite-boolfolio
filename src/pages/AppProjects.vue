@@ -23,7 +23,7 @@ import { store } from "../store";
         methods: {
             getAllProjects(){
                 axios.get(`${this.store.apiUrl}projects`).then((res) => {
-                    console.log(res.data);
+                    console.log(res.data.data);
                     store.projects = res.data;
                 }).catch((err) => {
                     console.log(err);
