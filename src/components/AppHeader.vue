@@ -11,8 +11,8 @@
           <router-link :to="{ name: item.name }" class="nav-link active" >{{ item.label }}</router-link>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form @submit.prevent="search" class="d-flex" role="search">
+        <input v-model="searchQuery" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
@@ -35,6 +35,11 @@
                         name: 'projects',
                     }
                 ]
+            }
+        },
+        methods: {
+            search(){
+              this.$router.push({ name: 'search', query: { search: this.searchQuery } });
             }
         }
     }
