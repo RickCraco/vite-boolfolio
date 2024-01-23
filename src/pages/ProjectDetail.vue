@@ -11,7 +11,7 @@
                 <p>{{ this.project.body }}</p>
                 <p class="mb-1 fs-5 fw-bold">Technologies : </p>
                 <ul class="list-unstyled">
-                    <li class="ms-3" v-for="item in this.project.technologies" :key="item.id">{{ item.name }} <i class="{{ item.icon }}"></i></li>
+                    <li class="ms-3" v-for="item in this.project.technologies" :key="item.id">{{ item.name }} <i :class="item.icon"></i></li>
                 </ul>
             </div>
         </div>
