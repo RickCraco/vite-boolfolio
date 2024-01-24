@@ -33,6 +33,10 @@
                     {
                         label: 'Projects',
                         name: 'projects',
+                    },
+                    {
+                        label: 'Contact',
+                        name: 'contacts',
                     }
                 ]
             }

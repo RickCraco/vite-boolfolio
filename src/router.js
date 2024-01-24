@@ -4,6 +4,7 @@ import AppHome from "./pages/AppHome.vue";
 import AppProjects from "./pages/AppProjects.vue";
 import ProjectDetail from "./pages/ProjectDetail.vue";
 import SearchProject from "./pages/SearchProject.vue";
+import AppContact from "./pages/AppContact.vue";
 
 const router = createRouter({
     history : createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
             path: "/search/projects",
             name: "search",
             component: SearchProject,
+        },
+        {
+            path: "/contacts",
+            name: "contacts",
+            component: AppContact,
         }
     ],
 })
