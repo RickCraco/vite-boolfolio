@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1>Projects List</h1>
+        <h1>Projects for {{ $route.query.search }}</h1>
         <div class="row">
             <div class="col-12 col-md-4 col-lg-3" v-for="item in store.projects" :key="item.id">
                 <CardComponent :project="item" />
